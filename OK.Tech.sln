@@ -11,9 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{4DAF8F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{D5ED895A-0032-46FB-9CE1-81A97914A55B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OK.Tech.Api", "src\OK.Tech.Api\OK.Tech.Api.csproj", "{6CB85030-176A-4E2F-805D-6D0B5E424DA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OK.Tech.Api", "src\OK.Tech.Api\OK.Tech.Api.csproj", "{6CB85030-176A-4E2F-805D-6D0B5E424DA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OK.Tech.Domain", "src\OK.Tech.Domain\OK.Tech.Domain.csproj", "{A7DF572C-9A6E-4263-8A56-A3EC86D9D08B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OK.Tech.Domain", "src\OK.Tech.Domain\OK.Tech.Domain.csproj", "{A7DF572C-9A6E-4263-8A56-A3EC86D9D08B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OK.Tech.Infra.Data", "OK.Tech.Infra.Data\OK.Tech.Infra.Data.csproj", "{500BCD42-1D65-4537-9A08-1BC7E06B744E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{A7DF572C-9A6E-4263-8A56-A3EC86D9D08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7DF572C-9A6E-4263-8A56-A3EC86D9D08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7DF572C-9A6E-4263-8A56-A3EC86D9D08B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{500BCD42-1D65-4537-9A08-1BC7E06B744E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500BCD42-1D65-4537-9A08-1BC7E06B744E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500BCD42-1D65-4537-9A08-1BC7E06B744E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500BCD42-1D65-4537-9A08-1BC7E06B744E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6CB85030-176A-4E2F-805D-6D0B5E424DA0} = {5ACF2965-C560-410E-8E6B-55379AC8B203}
 		{A7DF572C-9A6E-4263-8A56-A3EC86D9D08B} = {4DAF8F3B-2BA9-4964-981F-127DE629FC72}
+		{500BCD42-1D65-4537-9A08-1BC7E06B744E} = {D5ED895A-0032-46FB-9CE1-81A97914A55B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {702EEE5D-7186-4194-948D-26A68E50A088}
