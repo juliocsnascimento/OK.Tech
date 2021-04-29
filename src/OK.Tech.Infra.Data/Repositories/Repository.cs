@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace OK.Tech.Infra.Data.Repository
+namespace OK.Tech.Infra.Data.Repositories
 {
   public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
   {
@@ -41,7 +41,8 @@ namespace OK.Tech.Infra.Data.Repository
 
     public void Delete(Guid id)
     {
-       _entities.Remove(new TEntity { Id = id });
+      _entities.Remove(new TEntity { Id = id });
     }
+
   }
 }

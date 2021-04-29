@@ -10,7 +10,7 @@ using OK.Tech.Infra.Data.Contexts;
 namespace OK.Tech.Infra.Data.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20210426232448_Initial")]
+    [Migration("20210426232121_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -8,7 +8,6 @@ namespace OK.Tech.Api.Controllers
   [ApiController]
   public class MainController : ControllerBase
   {
-
     private readonly List<string> _errors;
 
     public MainController()
@@ -16,11 +15,11 @@ namespace OK.Tech.Api.Controllers
       _errors = new List<string>();
     }
 
-    public ActionResult CustomResponse(object result = null)
+    protected ActionResult CustomResponse(object result = null)
     {
       if (!IsOperationValid())
       {
-        return BadRequest(new { success = false, errors = "", data = result });
+        return BadRequest(new { success = false, errors = _errors, data = result });
       }
 
       return Ok(new { success = true, data = result });
@@ -31,6 +30,7 @@ namespace OK.Tech.Api.Controllers
       if (!modelState.IsValid)
       {
         var errorsMessages = modelState.Values.SelectMany(ms => ms.Errors).Select(me => me.ErrorMessage);
+
         _errors.AddRange(errorsMessages.ToList());
 
         return BadRequest(new { success = false, errors = _errors, data = result });
@@ -38,10 +38,10 @@ namespace OK.Tech.Api.Controllers
 
       return Ok(new { success = true, data = result });
     }
-   
+
     protected bool IsOperationValid()
     {
-      return !_errors.Any();
+      return _errors.Any();
     }
   }
 }

@@ -2,7 +2,7 @@
 
 namespace OK.Tech.Domain.Repositories
 {
-  public interface IProductRepository :IRepository<Product>
+  public interface IProductRepository : IRepository<Product>
   {
   }
 }
