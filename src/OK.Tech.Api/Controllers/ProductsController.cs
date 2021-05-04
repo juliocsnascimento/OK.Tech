@@ -35,14 +35,14 @@ namespace OK.Tech.Api.Controllers
     }
 
     [HttpPost]
-    public ActionResult<ProductViewModel> CreatProduct(ProductViewModel productViewModel)
+    public async Task<ActionResult<ProductViewModel>> CreatProduct(ProductViewModel productViewModel)
     {
       if(!ModelState.IsValid)
       {
         CustomResponse(ModelState, productViewModel);
       }
 
-      _productApp.Create(_mapper.Map<Product>(productViewModel));
+      await _productApp.Create(_mapper.Map<Product>(productViewModel));
 
       return CustomResponse(productViewModel);
     }

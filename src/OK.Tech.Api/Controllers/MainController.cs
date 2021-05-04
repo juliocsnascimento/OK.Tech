@@ -30,7 +30,6 @@ namespace OK.Tech.Api.Controllers
       if (!modelState.IsValid)
       {
         var errorsMessages = modelState.Values.SelectMany(ms => ms.Errors).Select(me => me.ErrorMessage);
-
         _errors.AddRange(errorsMessages.ToList());
 
         return BadRequest(new { success = false, errors = _errors, data = result });
@@ -41,7 +40,7 @@ namespace OK.Tech.Api.Controllers
 
     protected bool IsOperationValid()
     {
-      return _errors.Any();
+      return !_errors.Any();
     }
   }
 }

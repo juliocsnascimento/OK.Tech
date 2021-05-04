@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -35,6 +34,7 @@ namespace OK.Tech.Api
 
       services.AddScoped<IProductApp, ProductApp>();
       services.AddScoped<IProductRepository, ProductRepository>();
+      services.AddScoped<IUnitOfWork, UnitOfWork>();
 
       services.AddControllers();
 

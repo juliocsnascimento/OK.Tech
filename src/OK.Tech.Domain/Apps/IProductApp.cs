@@ -11,7 +11,7 @@ namespace OK.Tech.Domain.Apps
 
     Task<Product> GetById(Guid id);
 
-    void Create(Product entity);
+    Task Create(Product entity);
 
     void Update(Product entity);
 
