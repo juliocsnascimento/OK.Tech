@@ -8,6 +8,8 @@ namespace OK.Tech.Api.Configurations
   {
     public AutoMapperConfig()
     {
+      CreateMap<Customer, CustomerViewModel>().ReverseMap();
+
       CreateMap<Product, ProductViewModel>().ReverseMap();
 
       CreateMap<PriceList, PriceListViewModel>().ReverseMap();
